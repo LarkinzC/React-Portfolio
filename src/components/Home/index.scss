@@ -64,7 +64,7 @@
         font-size: 11px;
         font-family: sans-serif;
         letter-spacing: 3px;
-        animation: fadeEin 1s 1.8s backwards;
+        animation: fadein 1s 1.8s backwards;
     }
 
     .flat-button {
@@ -85,7 +85,10 @@
     &:hover {
         background: #ffd700;
         color: #333;
-
     }
+}
+
+#m {
+    margin-right: 15px;
 }
 }
