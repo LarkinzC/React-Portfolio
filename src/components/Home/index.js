@@ -1,7 +1,7 @@
 import LetterL from '../../assets/images/LetterL.png'
 import { Link } from 'react-router-dom'
 import './index.scss'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 
 const Home = () => {
@@ -9,10 +9,13 @@ const Home = () => {
     const nameArray = ['L', 'a', 'r', 'k', 'i', 'n', ' ', 'C', 'a', 'm', 'p', 'b', 'e', 'l', 'l']
     const jobArray = ['W', 'e','b',' ', 'D','e','v','e','l','o','p','e','r','.']
 
+    const timeout = useRef()
+
     useEffect(() => {
-        return setTimeout(() => {
-            setLetterClass('text-animate-hover')
-        }, [4000])
+            const timer = setTimeout(() =>{
+                setLetterClass('text-animate-hover')
+            }, 4000)
+            return () => clearTimeout(timer)
     }, [])
 
     return (
