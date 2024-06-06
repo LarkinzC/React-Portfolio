@@ -1,15 +1,16 @@
-import LetterL from '../../assets/images/LetterL.png'
+
 import { Link } from 'react-router-dom'
 import './index.scss'
 import {useState, useEffect, useRef} from 'react'
 import AnimatedLetters from '../AnimatedLetters'
+import Logo from '../Logo'
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = ['L', 'a', 'r', 'k', 'i', 'n', ' ', 'C', 'a', 'm', 'p', 'b', 'e', 'l', 'l']
     const jobArray = ['W', 'e','b',' ', 'D','e','v','e','l','o','p','e','r','.']
 
-    const timeout = useRef()
+    
 
     useEffect(() => {
             const timer = setTimeout(() =>{
@@ -27,7 +28,6 @@ const Home = () => {
                     <br />
                     <span className={`${letterClass} _13`}>I</span> 
                     <span id='m' className={`${letterClass} _14`}>'m</span> 
-                        {/* <img src={LetterL} alt='developer' />  SOURCE HELP WITH FORMATTING INLINE WITH SPAN*/}
                         <AnimatedLetters letterClass={letterClass} 
                         strArray={nameArray} 
                         idx={15} />
@@ -39,6 +39,7 @@ const Home = () => {
                 <h2>Frontend Developer / Javascript Expert / Pro DiscGolfer</h2>
                 <Link to='/contact' className='flat-button'>CONTACT ME</Link>
             </div>
+            <Logo />
         </div>
     );
 }

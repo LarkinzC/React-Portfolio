@@ -1,0 +1,26 @@
+.logo-container {
+    z-index: 0;
+    width: 400px;
+    height: 609px;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    border: 3px solid #ffd700;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    
+}
+
+img {
+    margin: 0;
+    display: block;
+    position: relative;
+    bottom: -5px;
+}
