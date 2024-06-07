@@ -1,11 +1,14 @@
 import './index.scss'
 import {Loader} from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef  } from 'react'
+import emailjs from '@emailjs/browser'
 
+emailjs.init('8cfxPdT4ZeOUBx2wR')
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
+    const refForm = useRef()
 
     useEffect(() => {
         const timer = setTimeout(() =>{
@@ -13,6 +16,25 @@ const Contact = () => {
         }, 3000)
         return () => clearTimeout(timer)
 }, [])
+
+const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+        .sendForm(
+            'service_175p18p',
+            'template_5msfauj',
+            refForm.current,
+            '8cfxPdT4ZeOUBx2wR'
+        )
+        .then (() => {
+            alert('Message successfully sent!')
+            window.location.reload(false)
+        },
+    () => {
+        alert('Failed to send the message, please try again!')
+    })
+}
 
 
     return (
@@ -29,10 +51,10 @@ const Contact = () => {
                 <p>
                     I am interested in any oppourtunities to aid fellow developers as 
                     well as myself - especially ambitious or large projects. However, if you have other 
-                    requests or questions, don't hesitate to contact me using below from either.
+                    requests or questions, don't hesitate to contact me using the form below.
                 </p>
             <div className='contact-form'>
-                    <form>
+                    <form ref={refForm} onSubmit={sendEmail}>
                         <ul>
                             <li className='half'>
                                 <input type='text' name='name' placeholder='Name' required />
@@ -54,7 +76,7 @@ const Contact = () => {
                                 </textarea>
                             </li>
                             <li>
-                                <input type='submit' className='flat-button' value='SEND' />
+                                <button type='submit'>Send</button>
                             </li>
                         </ul>
                     </form>
