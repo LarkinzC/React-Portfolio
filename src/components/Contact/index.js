@@ -3,6 +3,7 @@ import {Loader} from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import React, { useEffect, useState, useRef  } from 'react'
 import emailjs from '@emailjs/browser'
+import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 
 emailjs.init('8cfxPdT4ZeOUBx2wR')
 
@@ -76,11 +77,28 @@ const sendEmail = (e) => {
                                 </textarea>
                             </li>
                             <li>
-                                <button type='submit'>Send</button>
+                                <button className='flat-button' type='submit'>Send</button>
                             </li>
                         </ul>
                     </form>
                 </div>
+             </div>
+             <div className='info-map'>
+                Larkin Campbell 
+                <br />
+                United States
+                <br />
+                Redding, California
+                <br />
+                <span>Larkincampbell24@gmail.com</span>
+             </div>
+             <div className='map-wrap'>
+                <MapContainer center={[40.584890, -122.407700]} zoom={10}>
+                    <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'/>
+                    <Marker position={[40.584890, -122.407700]}>
+                        <Popup>This is where I live!</Popup>
+                    </Marker>
+                </MapContainer>
              </div>
         </div>
             <Loader type='pacman' />
