@@ -68,6 +68,10 @@
         border: 1px solid #ffd700;
         float: left;
         border-radius: 4px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     
