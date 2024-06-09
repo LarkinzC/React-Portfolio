@@ -1,22 +1,20 @@
 import './index.scss'
 import PortfolioPic from '../../assets/images/PortfolioPic.jpg'
 import { useRef, useEffect} from 'react'
-import gsap from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
 
 const Logo = () => {
     const bgRef = useRef()
     const solidRef = useRef()
 
-    useEffect(() => {
-        gsap.registerPlugin(DrawSVGPlugin)
+    // useEffect(() => {
+    //     gsap.registerPlugin(DrawSVGPlugin)
 
-        gsap.timeline()
-            .to(bgRef.current, {
-                duration: 1,
-                opacity: 1
-            })
-    }, [])
+    //     gsap.timeline()
+    //         .to(bgRef.current, {
+    //             duration: 1,
+    //             opacity: 1
+    //         })
+    // }, [])
 
     return (
         <div className='logo-container' ref={bgRef}>

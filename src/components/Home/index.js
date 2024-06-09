@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom'
 import './index.scss'
-import {useState, useEffect, useRef} from 'react'
+import {useState, useEffect,} from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import Logo from '../Logo'
 import { Loader } from 'react-loaders'
