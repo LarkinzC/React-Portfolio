@@ -1,6 +1,6 @@
 import './index.scss'
 import PortfolioPic from '../../assets/images/PortfolioPic.jpg'
-import { useRef, useEffect} from 'react'
+import { useRef} from 'react'
 
 const Logo = () => {
     const bgRef = useRef()
