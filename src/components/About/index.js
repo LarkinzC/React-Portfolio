@@ -27,17 +27,16 @@ const About = () => {
                     idx={15}
                     />
                 </h1>
-                    <p>I'm a young, ambitious, and skilled developer looking for a role at an established
-                        IT company with oppourtunity to work with the latest technologies along talented 
-                        developers on diverse projects.
+                    <p> I am an ambitious developer that's always eager to learn new libraries and flex my skills.
+                        My greatest stregths include data structures and algorithims, React.js, and Tailwind! My 
+                        favorite sources for software related inquiry are ThePrimeTime, JS Mastery, and Conner Ardman.
                     </p>
-                    <p>I'm confident in my abilities to execute projects, display my complex data structure skills,
-                        and have fun and make friends with anyone I cross paths with.
+                    <p>I'm confident in my abilities to execute projects, display my ever evolving library expertise,
+                        and have fun while making friends with anyone I cross paths with.
                     </p>
                     <p>
-                       {` My time away from my computer include being a competitive disc golfer, time with my wife 
-                        (insert 'mai waif' borat reference), and gaming! Pretty busy hobbies considering I never 
-                        leave my computer!`}
+                        My time away from my computer include being a competitive disc golfer, quality time with my beautiful wife who practices 
+                        clinical psychology, and gaming! Pretty busy hobbies considering I never leave my desk!
                     </p>
                 
             </div>
